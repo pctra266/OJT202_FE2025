@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*
+    Inheritance*/
+
+        /* div {
+            color: navy;
+             Thuộc tính color được kế thừa 
+            font-family: Arial;
+            border: 1px solid black;
+             Thuộc tính border không được kế thừa 
+        }  */
+
+
+        /*  Specificity*/
+
+        /* Internal CSS */
+        p {
+            color: blue;
+        }
+
+        .highlight {
+            color: green;
+        }
+
+        #special {
+            color: red;
+        }
+
+        /* Inline CSS (style trực tiếp trong thẻ HTML): Ưu tiên cao nhất.
+Internal CSS (style trong thẻ <style>): Ưu tiên trung bình.
+External CSS (style từ file .css bên ngoài): Ưu tiên thấp nhất.
+Nếu cùng cấp, CSS tính specificity (độ cụ thể): ID > Class > Element. */
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <p>Đoạn văn này kế thừa màu navy và font Arial từ div cha.</p> -->
+
+
+        <p style="color: purple;">Đoạn văn này có inline CSS (màu tím).</p>
+        <p class="highlight">Đoạn văn này dùng class (màu xanh lá).</p>
+        <p id="special" class="highlight">Đoạn văn này có id và class (màu đỏ).</p>
+    </div>
+</body>
+
+</html>
