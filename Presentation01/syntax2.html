@@ -3,28 +3,6 @@
 
 <head>
     <style>
-        /* Element selector: Chọn dựa trên tên thẻ HTML (ví dụ: p, div).
-Class selector: Chọn dựa trên giá trị class (bắt đầu bằng ., ví dụ: .my-class).
-ID selector: Chọn dựa trên giá trị id (bắt đầu bằng #, ví dụ: #my-id).
-Kết hợp selector:
-Descendant selector (div p): Chọn tất cả thẻ p bên trong div.
-Child selector (ul > li): Chọn thẻ li là con trực tiếp của ul.
-Pseudo-class (a:hover): Áp dụng style khi người dùng tương tác (ví dụ: di chuột qua thẻ a). */
-        /* Element selector */
-        p {
-            color: green;
-        }
-
-        /* Class selector */
-        .highlight {
-            background-color: yellow;
-        }
-
-        /* ID selector */
-        #special {
-            font-weight: bold;
-        }
-
         /* Descendant selector */
         div p {
             font-style: italic;
@@ -32,17 +10,24 @@ Pseudo-class (a:hover): Áp dụng style khi người dùng tương tác (ví d�
 
         /* Child selector */
         ul>li {
-            list-style-type: square; /*xác định dấu đầu dòng */
+            list-style-type: square;
+            /*xác định dấu đầu dòng */
         }
 
+
         /* Pseudo-class */
-        a:hover {
+        /* a:hover {
             color: red;
         }
+
+        p::first-letter {
+            font-size: 200%;
+        } */
     </style>
 </head>
 
 <body>
+    <h1></h1>
     <p>Đây là đoạn văn bản thông thường.</p>
     <p class="highlight">Đoạn văn bản được tô sáng.</p>
     <p id="special">Đoạn văn bản đặc biệt.</p>
