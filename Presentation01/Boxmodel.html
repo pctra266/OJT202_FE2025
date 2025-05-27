@@ -1,154 +1,167 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="UTF-8" />
-<title>Demo Box Model - Thuộc tính CSS</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 30px;
-  }
+  <meta charset="UTF-8" />
+  <title>Demo Box Model - Thuộc tính CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
 
-  h2 {
-    margin-top: 40px;
-    color: #004a99;
-  }
+    h2 {
+      margin-top: 40px;
+      color: #004a99;
+    }
 
-  .container {
-    margin-top: 15px;
-    margin-bottom: 40px;
-  }
+    .container {
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
 
-  /* Khung chung cho các box */
-  .box {
-    background-color: #a0c8f0;
-    color: #000;
-    text-align: center;
-    line-height: 80px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-  }
+    /* Khung chung cho các box */
+    .box {
+      background-color: #a0c8f0;
+      color: #000;
+      text-align: center;
+      line-height: 80px;
+      font-weight: bold;
 
-  /* 1. width & height */
-  .width-height {
-    width: 200px;
-    height: 80px;
-  }
+      transition: all 0.3s ease;
+    }
 
-  /* 2. padding */
-  .padding {
-    width: 200px;
-    height: 80px;
-    padding: 30px;
-    background-color: #c8e6c9;
-  }
+    /* 1. width & height */
+    .width-height {
+      width: 200px;
+      height: 80px;
+    }
 
-  /* 3. border */
-  .border {
-    width: 200px;
-    height: 80px;
-    padding: 10px;
-    border: 8px solid #2e7d32;
-    background-color: #a5d6a7;
-  }
+    /* 2. padding */
+    .padding {
+      width: 200px;
+      height: 80px;
+      padding: 40px 30px 20px 10px;
+      background-color: #c8e6c9;
+    }
 
-  /* 4. margin */
-  .margin {
-    width: 200px;
-    height: 80px;
-    padding: 10px;
-    border: 5px solid #1565c0;
-    margin: 40px;
-    background-color: #90caf9;
-  }
+    /* 3. border */
+    .border {
+      width: 200px;
+      height: 80px;
+      padding: 10px;
+      border-top: 40px solid #2e7d32;
+      border-right: 30px solid #2e7d32;
+      border-bottom: 20px solid #2e7d32;
+      border-left: 10px solid #2e7d32;
+      background-color: #a5d6a7;
+    }
 
-  /* Để dễ quan sát kích thước thực tế */
-  .wrapper {
-    border: 1px dashed #777;
-    padding: 5px;
-    margin-bottom: 60px;
-  }
-  /* css cho slide 12 */
-  .section {
-    margin-top: 60px;
-    padding: 20px;
-    background-color: #f3f3f3;
-    border-left: 6px solid #004a99;
-  }
 
-  .demo-container {
-    display: flex;
-    gap: 40px;
-    margin-top: 20px;
-  }
+    .margin {
+      width: 200px;
+      height: 80px;
+      padding: 10px;
+      border: 5px solid #1565c0;
+      margin: 40px 30px 20px 10px;
+      background-color: #90caf9;
+    }
 
-  .demo-container > div {
-    text-align: center;
-  }
 
-  .content-box, .border-box {
-    width: 300px;
-    padding: 20px;
-    border: 5px solid #333;
-    background-color: #bbdefb;
-    box-sizing: content-box; /* mặc định cho content-box */
-  }
+    .wrapper {
+      border: 1px dashed #777;
+      padding: 5px;
+      margin-bottom: 60px;
+    }
 
-  .border-box {
-    box-sizing: border-box;
-    background-color: #c8e6c9;
-  }
+    /* css cho slide 12 */
+    .section {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #f3f3f3;
+      border-left: 6px solid #004a99;
+    }
 
-  .label {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-  }
-</style>
+    .demo-container {
+      display: flex;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .demo-container>div {
+      text-align: center;
+    }
+
+    .content-box,
+    .border-box {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid #333;
+      background-color: #bbdefb;
+      box-sizing: content-box;
+
+    }
+
+    .border-box {
+      box-sizing: border-box;
+      background-color: #c8e6c9;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
 
   <h1>Demo Box Model – Tác dụng của các thuộc tính CSS</h1>
 
   <h2>1. width & height (kích thước content)</h2>
   <div class="wrapper">
-    <div class="box width-height">width: 200px; height: 80px;</div>
+    <div class="box width-height" style="background-color: #777;width: 200px; height: 80px;"></div>
   </div>
 
   <h2>2. padding (khoảng trắng bên trong)</h2>
-  <div class="wrapper">
-    <div class="box padding" style="border: #000 8px solid;">padding: 30px;</div>
+  <div class=" wrapper">
+    <div class="box padding" style="border: #000 8px solid;background-color: #777">padding: 30px;</div>
   </div>
 
   <h2>3. border (viền bao quanh)</h2>
   <div class="wrapper">
-    <div class="box border">border: 8px solid;</div>
+    <div class="box border" style="background-color: #777;">border: 8px solid;</div>
   </div>
 
   <h2>4. margin (khoảng cách bên ngoài)</h2>
   <div class="wrapper">
-    <div class="box  margin">margin: 40px;</div>
+    <div class="box  margin" style="background-color: #777;">margin: 40px;</div>
   </div>
 
   <div class="section">
-  <h1>🔷 Slide 12: Tính kích thước tổng</h1>
-  <p><strong>Công thức:</strong></p>
-  <p><code>Tổng chiều rộng = content + padding + border + margin</code></p>
-  <p><strong>Vấn đề:</strong> Khi dùng <code>content-box</code>, phần tử sẽ lớn hơn so với giá trị <code>width</code> bạn đặt.</p>
-  <p><strong>Giải pháp:</strong> Dùng <code>box-sizing: border-box</code> để giữ kích thước cố định.</p>
+    <h1>🔷 Slide 12: Tính kích thước tổng</h1>
+    <p><strong>Công thức:</strong></p>
+    <p><code>Tổng chiều rộng = content + padding + border + margin</code></p>
+    <p><strong>Vấn đề:</strong> Khi dùng <code>content-box</code>, phần tử sẽ lớn hơn so với giá trị
+      <code>width</code> bạn đặt.
+    </p>
+    <p><strong>Giải pháp:</strong> Dùng <code>box-sizing: border-box</code> để giữ kích thước cố định.</p>
 
-  <div class="demo-container">
-    <div>
-      <div class="box content-box">Chiếm 350px thực tế</div>
-      <div class="label">300px + 2×20 + 2×5</div>
+    <div class="demo-container">
+      <div>
+        <div class="box content-box">Chiếm 350px thực tế</div>
+        <div class="label">300px + 2×20 + 2×5</div>
+      </div>
+      <div>
+        <div class="box border-box">Chiếm đúng 300px</div>
+        <div class="label">Đã tính cả padding & border</div>
+      </div>
     </div>
-    <div>
-      <div class="box border-box">Chiếm đúng 300px</div>
-      <div class="label">Đã tính cả padding & border</div>
-    </div>
+   
+
   </div>
-</div>
 
 </body>
+
 </html>

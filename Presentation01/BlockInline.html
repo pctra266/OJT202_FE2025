@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block-box {
+            display: block;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .inline-box {
+            display: inline;
+            background-color: lightgreen;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .run-in-box {
+            display: run-in;
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        .block-after {
+            display: block;
+            background-color: lightyellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Block Element</h2>
+    <div style="background: lightblue;">Tôi là block</div>
+    <h2>Inline Element</h2>
+    <span style="background: lightgreen;">Tôi là inline</span>
+    <span style="background: lightcoral;">Tôi cũng là inline</span>
+
+    <h2>Inner display</h2>
+    <h3>Table Layout</h3>
+    <div style="display: table; border: 2px solid black; width: 300px;">
+        <div style="display: table-row;">
+            <div style="display: table-cell; padding: 10px; background: lightblue; border: 1px solid gray; ">Item 1
+            </div>
+            <div style="display: table-cell; padding: 10px; background: lightgreen; border: 1px solid gray;">Item 2
+            </div>
+        </div>
+        <div style="display: table-row;">
+            <div style="display: table-cell; padding: 10px; background: lightcoral; border: 1px solid gray;">Item 3
+            </div>
+            <div style="display: table-cell; padding: 10px; background: lightyellow; border: 1px solid gray;">Item 4
+            </div>
+        </div>
+    </div>
+
+    <h3>Flexbox Layout</h3>
+    <div style="display: flex; border: 2px solid black; width: 300px; gap: 10px; padding: 5px;">
+        <div style="flex: 1; padding: 10px; background: lightblue;">Item 1</div>
+        <div style="flex: 2; padding: 10px; background: lightgreen;">Item 2 (gấp đôi)</div>
+        <div style="flex: 1; padding: 10px; background: lightcoral;">Item 3</div>
+    </div>
+    <h3>Grid Layout</h3>
+    <div style="display: grid; border: 2px solid black; width: 300px; 
+            grid-template-columns: 1fr 2fr; 
+            grid-template-rows: auto auto;
+            gap: 10px; padding: 5px;">
+        <div style="padding: 10px; background: lightblue;">Item 1 (1fr)</div>
+        <div style="padding: 10px; background: lightgreen;">Item 2 (2fr)</div>
+        <div style="padding: 10px; background: lightcoral;">Item 3 (dòng 2, cột 1)</div>
+        <div style="padding: 10px; background: lightyellow;">Item 4 (dòng 2, cột 2)</div>
+    </div>
+
+    <h2>Outer Display Types</h2>
+
+    <h3>Block</h3>
+    <div class="block-box">Block Element 1
+    </div>
+    <div class="block-box">Block Element 2</div>
+
+    <h3>Inline</h3>
+    <span class="inline-box">Inline 1</span>
+    <span class="inline-box">Inline 2</span>
+    <span class="inline-box">Inline 3</span>
+
+    <h3>Run-in</h3>
+    <div class="run-in-box">Run-in Heading</div>
+    <div class="block-after">This block follows the run-in. If supported, the run-in appears inline before this text.
+    </div>
+    <h2>Display:inline-block</h2>
+    <div style="display: inline-block; width: 100px; height: 100px; background: orange; margin: 10px;">
+        Box A
+    </div>
+    <div style="display: inline-block; width: 100px; height: 100px; background: skyblue; margin: 10px;">
+        Box B
+    </div>
+
+</body>
+
+</html>
